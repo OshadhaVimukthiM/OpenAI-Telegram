@@ -1,8 +1,8 @@
 import telebot
 from telebot import types
 import openai
-openai.api_key = "secret key"
-api = 'bot-key'
+openai.api_key = "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"
+api = '5821597391:AAG-zGTvptgplCTreo-fpLKW5qJzLQnIkVg'
 bot = telebot.TeleBot(api)
 
 def rsp(question):
@@ -19,7 +19,7 @@ def rsp(question):
     return response.choices[0].text
 @bot.message_handler(commands=['start', 'help', 'about'])
 def send_welcome(message):
- bot.send_message(message.chat.id, 'use /ask followed by a question or statement to generate a response')
+ bot.send_message(message.chat.id, 'Hi, I m Naksu.')
  
 @bot.message_handler(func=lambda message: True) 
 def echo_message(message):
