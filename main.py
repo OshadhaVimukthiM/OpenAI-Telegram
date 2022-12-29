@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 api = '5821597391:AAG-zGTvptgplCTreo-fpLKW5qJzLQnIkVg'
 bot = telebot.TeleBot(api)
 
@@ -19,7 +19,7 @@ def rsp(question):
     return response.choices[0].text
 @bot.message_handler(commands=['start', 'help', 'about'])
 def send_welcome(message):
- bot.send_message(message.chat.id, 'Hi, I m Naksu.')
+ bot.send_message(message.chat.id, 'Hi, I'm Naksu.')
  
 @bot.message_handler(func=lambda message: True) 
 def echo_message(message):
