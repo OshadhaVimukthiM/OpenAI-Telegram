@@ -19,7 +19,7 @@ def rsp(question):
     return response.choices[0].text
 @bot.message_handler(commands=['start', 'help', 'about'])
 def send_welcome(message):
- bot.send_message(message.chat.id, 'Hi, I'm Naksu.')
+ bot.send_message(message.chat.id, 'Project Naksu')
  
 @bot.message_handler(func=lambda message: True) 
 def echo_message(message):
